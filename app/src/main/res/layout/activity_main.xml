@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kangwon.cs.kangdapp.MainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+    android:id="@+id/dl_activity_main_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar">
+
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fl_activity_main_container"
+        android:background="@drawable/bg"
+        >
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="90dp"
+            android:id="@+id/noticeBtn"
+            android:clickable="true"
+            android:background="@drawable/noticebg">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/noticeImg"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/notice_1"
+                android:paddingLeft="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="공지사항"
+                android:id="@+id/noticetxt"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#000000"
+                android:gravity="center|start"
+                android:layout_toRightOf="@+id/noticeImg"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="5dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:id="@+id/snsBtn"
+            android:layout_gravity="top|right"
+            android:clickable="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/noticeBtn"
+            android:layout_alignBottom="@+id/noticeBtn"
+            android:layout_toRightOf="@+id/noticeBtn"
+            android:background="@drawable/snsbg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SNS"
+                android:id="@+id/snstxt"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/snsImg"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="#000000"
+                android:gravity="center|start"
+                android:textSize="20sp"
+                android:layout_marginLeft="5dp" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/snsImg"
+                android:src="@drawable/sns"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingLeft="25dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:clickable="true"
+            android:id="@+id/libBtn"
+            android:background="@drawable/riblarybg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="도서관"
+                android:id="@+id/libtxt"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:layout_below="@+id/libImg"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/libImg"
+                android:src="@drawable/books"
+                android:layout_marginTop="19dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/libBtn"
+            android:layout_toRightOf="@+id/libBtn"
+            android:id="@+id/menuBtn"
+            android:clickable="true"
+            android:background="@drawable/riblarybg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주간식당"
+                android:id="@+id/menutxt"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/menuImg"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/menuImg"
+                android:src="@drawable/cook"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="19dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/menuBtn"
+            android:layout_toRightOf="@+id/menuBtn"
+            android:clickable="true"
+            android:id="@+id/campusBtn"
+            android:background="@drawable/cambg"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="캠퍼스 정보"
+                android:id="@+id/campustxt"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:layout_below="@+id/campusImg"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/campusImg"
+                android:src="@drawable/shool"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="19dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:layout_above="@+id/libBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/schedulBtn"
+            android:clickable="true"
+            android:background="@drawable/haksabg">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/schedulImg"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/schedule_m"
+                android:paddingLeft="20dp"
+                android:paddingRight="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="학사일정"
+                android:id="@+id/schedultxt"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/schedulImg"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center|start"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/schedulBtn"
+            android:layout_alignRight="@+id/campusBtn"
+            android:layout_alignEnd="@+id/campusBtn"
+            android:layout_above="@+id/menuBtn"
+            android:layout_toRightOf="@+id/schedulBtn"
+            android:layout_toEndOf="@+id/schedulBtn"
+            android:id="@+id/realbusBtn"
+            android:clickable="true"
+            android:background="@drawable/busbg">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/realbusImg"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/bus4"
+                android:paddingLeft="20dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="실시간 버스"
+                android:id="@+id/readbustxt"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/realbusImg"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center|start"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:layout_above="@+id/schedulBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/infoBtn"
+            android:clickable="true"
+            android:background="@drawable/haksabg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="학사정보"
+                android:id="@+id/infotxt"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center|start"
+                android:textColor="#ffffff"
+                android:layout_toRightOf="@+id/infoImg"
+                android:layout_toEndOf="@+id/infoImg"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/infoImg"
+                android:src="@drawable/haksa"
+                android:paddingLeft="20dp"
+                android:paddingRight="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/infoBtn"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/schedulBtn"
+            android:layout_toRightOf="@+id/schedulBtn"
+            android:layout_toEndOf="@+id/schedulBtn"
+            android:clickable="true"
+            android:id="@+id/shuttleBtn"
+            android:background="@drawable/busbg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="셔틀버스"
+                android:id="@+id/shuttletxt"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center|start"
+                android:textSize="20sp"
+                android:layout_toRightOf="@+id/shuttleImg"
+                android:layout_toEndOf="@+id/shuttleImg"
+                android:textColor="#ffffff" />
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/shuttleImg"
+                android:src="@drawable/shuttle"
+                android:paddingLeft="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingRight="5dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/container"
+        android:layout_gravity="start">
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="700dp"
+            android:id="@+id/btncontainer"
+            android:background="#ffffff"
+            android:layout_alignParentEnd="false">
+
+            <ExpandableListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/exlist"
+                android:groupIndicator="@null"
+                android:divider="#CBCBCB"
+                android:dividerHeight="1dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="57dp"
+        android:background="#001b5f"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

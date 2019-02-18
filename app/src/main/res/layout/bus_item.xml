@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="정보가 없습니다."
+        android:id="@+id/bus_number"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textIsSelectable="false"
+        android:gravity="center|start"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/wait_time"
+        android:textColor="#333333"
+        android:gravity="center|start"
+        android:layout_below="@+id/bus_number"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/current"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/remain"
+        android:layout_toEndOf="@+id/bus_number"
+        android:gravity="left|center"
+        android:layout_toRightOf="@+id/bus_number"
+        android:paddingLeft="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/remain"
+        android:textColor="#333333"
+        android:gravity="center|start"
+        android:paddingTop="10dp"
+        android:layout_alignTop="@+id/wait_time"
+        android:layout_toRightOf="@+id/wait_time"
+        android:layout_toEndOf="@+id/wait_time"
+        android:paddingLeft="15dp"
+        android:textSize="12sp" />
+
+</RelativeLayout>

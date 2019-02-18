@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:weightSum="1">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="57dp"
+        android:background="#001b5f"/>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/snList"
+        android:dividerHeight="1dp"
+        android:divider="#ffffff"
+        android:layout_below="@+id/Search_Base" />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayoutSN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/TabStyle"
+        android:background="#333333"
+        app:tabIndicatorHeight="5dp"
+        app:tabMode="scrollable"
+        app:tabMinWidth="90dp"
+        android:layout_below="@+id/toolbar" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pagerSN"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Search_Base" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/Search_Base"
+        android:background="#EDEDED"
+        android:layout_below="@+id/tabLayoutSN"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@android:drawable/ic_menu_search" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:id="@+id/editText2"
+            android:textColor="#000000"
+            android:background="#ffffff"
+            android:outlineProvider="background"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/button"
+            android:layout_toStartOf="@+id/button"
+            android:paddingLeft="10dp"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

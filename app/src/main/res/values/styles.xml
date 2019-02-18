@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ThemeMain" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorAccent">#00bfff</item>
+        <item name="colorPrimary">#001b5f</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="tabIndicatorHeight">3dp</item>
+    </style>
+    <style name="TabStyle" parent="Theme.AppCompat">
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="android:dividerPadding">1dp</item>
+        <item name="colorAccent">#FF7E00</item>
+        <item name="colorPrimary">#1838c4</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+</resources>
